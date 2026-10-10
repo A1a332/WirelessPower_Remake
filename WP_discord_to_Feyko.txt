@@ -1,0 +1,15 @@
+Hi Feyko,
+
+Hope it's OK to reach out. I've been a fan of your **Wireless Power** mod on ficsit.app, but I noticed it's been on v0.0.7alpha (Feb 2022) ever since and never adapted to Satisfactory 1.0 / 1.1 / 1.2, so it no longer runs on current game versions.
+
+I've rebuilt the mod from scratch as a Satisfactory Mod Loader (SML) C++ mod that brings the wireless-power idea back: peer nodes (Relay / Converter / Feeder / Transmission Tower) that share one power circuit across distance without any cables, with auto-join-on-placement, a console for managing links and IDs, and 4800 m line-of-sight tower links. It's a clean reimplementation — your original was never open-sourced, so nothing was copied — aimed at modern Satisfactory versions.
+
+Since you're listed as the original author on ficsit, I wanted to ask first out of respect for your work: would you be open to either
+  (a) adding me as a collaborator on the existing Wireless Power page so I can publish updates there, or
+  (b) transferring the page to me?
+If you'd rather I just publish it as a separate new mod page that clearly credits you as the original author, that's completely fine with me too.
+
+Either way — thanks for the original inspiration. Let me know what you'd prefer!
+
+Best,
+[YourName] / [YourDiscordTag]

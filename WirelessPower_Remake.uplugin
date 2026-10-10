@@ -1,0 +1,47 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.1.5",
+	"SemVersion": "1.1.5",
+	"GameVersion": ">=502094",
+	"FriendlyName": "Wireless Power 重制版",
+	"Description": "Wireless power transfer for Satisfactory 1.2. Revival of Feyko's discontinued Wireless Power mod: a wireless grid of peer nodes (Relay / Power Converter / Area Power Pole / Laser Tower) that share one power circuit across distance without cables. A newly built node joins the in-range grid by itself (distance based, no id needed) and inherits the nearest node's channel; the Area Power Pole also carries a real cable terminal like the original.",
+	"Category": "Modding",
+	"CreatedBy": "Monsue",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "WirelessPower",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Core",
+				"CoreUObject",
+				"Engine",
+				"InputCore",
+				"FactoryGame",
+				"SML"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "SML",
+			"Enabled": true,
+			"SemVersion": "^3.12.0"
+		}
+	],
+	"LocalizationTargets": [
+		{
+			"Name": "WirelessPower",
+			"LoadingPolicy": "Always",
+			"ConfigGenerationPolicy": "Never"
+		}
+	]
+}

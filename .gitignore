@@ -1,0 +1,10 @@
+# 编译产物（不纳入源码仓库）
+Binaries/
+Intermediate/
+Saved/
+__pycache__/
+*.zip
+
+# 编辑器
+.vs/
+.idea/

@@ -1,0 +1,393 @@
+﻿# WirelessPower English translation.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: WirelessPower\n"
+"POT-Creation-Date: 2026-10-03 11:03\n"
+"PO-Revision-Date: 2026-10-03 11:03\n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-SourceKey: msgstr\n"
+
+#. Key:	Milestone_Mk1_Name
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/Registration.cpp(810)
+#: Mods/WirelessPower/Source/WirelessPower/Registration.cpp(810)
+msgid ",Milestone_Mk1_Name"
+msgstr "Wireless Power Mk1"
+
+#. Key:	Milestone_Mk1_Desc
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/Registration.cpp(811)
+#: Mods/WirelessPower/Source/WirelessPower/Registration.cpp(811)
+msgid ",Milestone_Mk1_Desc"
+msgstr "Wireless Power tier 1. The Power Relay Mk1, Power Converter and Power Feeder Mk1 are now unlocked in the build menu; this milestone advances the tech tier. Wireless nodes sharing an ID pool power with each other within range, with no cable between them."
+
+#. Key:	Milestone_Mk2_Name
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/Registration.cpp(820)
+#: Mods/WirelessPower/Source/WirelessPower/Registration.cpp(820)
+msgid ",Milestone_Mk2_Name"
+msgstr "Wireless Power Mk2"
+
+#. Key:	Milestone_Mk2_Desc
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/Registration.cpp(821)
+#: Mods/WirelessPower/Source/WirelessPower/Registration.cpp(821)
+msgid ",Milestone_Mk2_Desc"
+msgstr "Wireless Power tier 2: the Power Relay Mk2 (48 m) and Power Feeder Mk2 (24 m) are now unlocked in the build menu."
+
+#. Key:	Milestone_Mk3_Name
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/Registration.cpp(829)
+#: Mods/WirelessPower/Source/WirelessPower/Registration.cpp(829)
+msgid ",Milestone_Mk3_Name"
+msgstr "Wireless Power Mk3"
+
+#. Key:	Milestone_Mk3_Desc
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/Registration.cpp(830)
+#: Mods/WirelessPower/Source/WirelessPower/Registration.cpp(830)
+msgid ",Milestone_Mk3_Desc"
+msgstr "Unlocks the Power Transmission Tower: a 4800 m line-of-sight link that carries power across canyons. It also advances Wireless Power to tier 3 (Power Relay Mk3 at 96 m and Power Feeder Mk3 at 48 m, both already unlocked)."
+
+#. Key:	Building_RelayMk1
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/Registration.cpp(864)
+#: Mods/WirelessPower/Source/WirelessPower/Registration.cpp(864)
+msgid ",Building_RelayMk1"
+msgstr "Power Relay Mk1"
+
+#. Key:	Desc_RelayMk1
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/Registration.cpp(865)
+#: Mods/WirelessPower/Source/WirelessPower/Registration.cpp(865)
+msgid ",Desc_RelayMk1"
+msgstr "An access point for the wireless grid. Wire it into a powered grid and it will share power with same-ID nodes within 24 m -- no cable between the nodes."
+
+#. Key:	Building_RelayMk2
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/Registration.cpp(875)
+#: Mods/WirelessPower/Source/WirelessPower/Registration.cpp(875)
+msgid ",Building_RelayMk2"
+msgstr "Power Relay Mk2"
+
+#. Key:	Desc_RelayMk2
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/Registration.cpp(876)
+#: Mods/WirelessPower/Source/WirelessPower/Registration.cpp(876)
+msgid ",Desc_RelayMk2"
+msgstr "An access point for the wireless grid. Range 48 m."
+
+#. Key:	Building_RelayMk3
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/Registration.cpp(884)
+#: Mods/WirelessPower/Source/WirelessPower/Registration.cpp(884)
+msgid ",Building_RelayMk3"
+msgstr "Power Relay Mk3"
+
+#. Key:	Desc_RelayMk3
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/Registration.cpp(885)
+#: Mods/WirelessPower/Source/WirelessPower/Registration.cpp(885)
+msgid ",Desc_RelayMk3"
+msgstr "An access point for the wireless grid. Range 96 m."
+
+#. Key:	Building_PowerConverter
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/Registration.cpp(898)
+#: Mods/WirelessPower/Source/WirelessPower/Registration.cpp(898)
+msgid ",Building_PowerConverter"
+msgstr "Power Converter"
+
+#. Key:	Desc_PowerConverter
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/Registration.cpp(899)
+#: Mods/WirelessPower/Source/WirelessPower/Registration.cpp(899)
+msgid ",Desc_PowerConverter"
+msgstr "Converts between the wired and the wireless grid. Once wired into a powered grid it supplies same-ID nodes within 12 m."
+
+#. Key:	Building_PowerConverterMk2Disabled
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/Registration.cpp(909)
+#: Mods/WirelessPower/Source/WirelessPower/Registration.cpp(909)
+msgid ",Building_PowerConverterMk2Disabled"
+msgstr "Power Converter Mk2 (disabled)"
+
+#. Key:	Desc_ReservedTier
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/Registration.cpp(910)
+#: Mods/WirelessPower/Source/WirelessPower/Registration.cpp(910)
+msgid ",Desc_ReservedTier"
+msgstr "Tier reserved; not registered in the current version."
+
+#. Key:	Building_PowerConverterMk3Disabled
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/Registration.cpp(918)
+#: Mods/WirelessPower/Source/WirelessPower/Registration.cpp(918)
+msgid ",Building_PowerConverterMk3Disabled"
+msgstr "Power Converter Mk3 (disabled)"
+
+#. Key:	Building_FeederMk1
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/Registration.cpp(929)
+#: Mods/WirelessPower/Source/WirelessPower/Registration.cpp(929)
+msgid ",Building_FeederMk1"
+msgstr "Power Feeder Mk1"
+
+#. Key:	Desc_FeederMk1
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/Registration.cpp(930)
+#: Mods/WirelessPower/Source/WirelessPower/Registration.cpp(930)
+msgid ",Desc_FeederMk1"
+msgstr "Connect machines to this node and it draws power from same-ID nodes within 12 m -- no cable between the nodes."
+
+#. Key:	Building_FeederMk2
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/Registration.cpp(940)
+#: Mods/WirelessPower/Source/WirelessPower/Registration.cpp(940)
+msgid ",Building_FeederMk2"
+msgstr "Power Feeder Mk2"
+
+#. Key:	Desc_FeederMk2
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/Registration.cpp(941)
+#: Mods/WirelessPower/Source/WirelessPower/Registration.cpp(941)
+msgid ",Desc_FeederMk2"
+msgstr "Connect machines to this node. Range 24 m."
+
+#. Key:	Building_FeederMk3
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/Registration.cpp(949)
+#: Mods/WirelessPower/Source/WirelessPower/Registration.cpp(949)
+msgid ",Building_FeederMk3"
+msgstr "Power Feeder Mk3"
+
+#. Key:	Desc_FeederMk3
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/Registration.cpp(950)
+#: Mods/WirelessPower/Source/WirelessPower/Registration.cpp(950)
+msgid ",Desc_FeederMk3"
+msgstr "Connect machines to this node. Range 48 m."
+
+#. Key:	Building_LaserTower
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/Registration.cpp(960)
+#: Mods/WirelessPower/Source/WirelessPower/Registration.cpp(960)
+msgid ",Building_LaserTower"
+msgstr "Power Transmission Tower"
+
+#. Key:	Desc_LaserTower
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/Registration.cpp(961)
+#: Mods/WirelessPower/Source/WirelessPower/Registration.cpp(961)
+msgid ",Desc_LaserTower"
+msgstr "A long-range wireless power link (4800 m); towers need line of sight to each other. Carries power across canyons and over long distances."
+
+#. Key:	Building_AreaPole
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(112)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(112)
+msgid ",Building_AreaPole"
+msgstr "Power Feeder"
+
+#. Key:	Building_Relay
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(114)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(114)
+msgid ",Building_Relay"
+msgstr "Power Relay"
+
+#. Key:	Panel_MkTitle
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(122)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(122)
+msgid ",Panel_MkTitle"
+msgstr "{0} Mk{1}"
+
+#. Key:	Panel_ConsoleSuffix
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(125)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(125)
+msgid ",Panel_ConsoleSuffix"
+msgstr "{0} · Console"
+
+#. Key:	Title
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(154)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(154)
+msgid ",Title"
+msgstr "Wireless Power Console"
+
+#. Key:	Btn_ToggleLink
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(165)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(165)
+msgid ",Btn_ToggleLink"
+msgstr "Toggle link"
+
+#. Key:	Section_Id
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(172)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(172)
+msgid ",Section_Id"
+msgstr "ID"
+
+#. Key:	Label_CurrentId
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(176)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(176)
+msgid ",Label_CurrentId"
+msgstr "Current ID"
+
+#. Key:	Label_NewId
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(185)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(185)
+msgid ",Label_NewId"
+msgstr "New ID"
+
+#. Key:	Btn_Set
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(199)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(199)
+msgid ",Btn_Set"
+msgstr "Set"
+
+#. Key:	Section_CoverageRadius
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(220)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(220)
+msgid ",Section_CoverageRadius"
+msgstr "Coverage Radius (m)"
+
+#. Key:	Label_RangeZero
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(221)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(221)
+msgid ",Label_RangeZero"
+msgstr "Current range: 0 m"
+
+#. Key:	Hint_RangeInput
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(226)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(226)
+msgid ",Hint_RangeInput"
+msgstr "Enter an exact value (m)"
+
+#. Key:	Btn_SetRange
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(229)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(229)
+msgid ",Btn_SetRange"
+msgstr "Set range"
+
+#. Key:	Btn_PowerDown
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(260)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(260)
+msgid ",Btn_PowerDown"
+msgstr "Power off"
+
+#. Key:	Btn_PowerUp
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(261)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(261)
+msgid ",Btn_PowerUp"
+msgstr "Power on"
+
+#. Key:	Label_LinkableTowerIds
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(266)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(266)
+msgid ",Label_LinkableTowerIds"
+msgstr "Linkable tower IDs"
+
+#. Key:	Btn_LaserVisibleOn
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(272)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(272)
+msgid ",Btn_LaserVisibleOn"
+msgstr "Beams visible: on"
+
+#. Key:	Btn_RangeDisplayOff
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(291)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(291)
+msgid ",Btn_RangeDisplayOff"
+msgstr "Range display: off"
+
+#. Key:	Hint_Usage
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(305)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(305)
+msgid ",Hint_Usage"
+msgstr "Note: this building must be wired into a powered grid; nodes sharing an ID and standing within range link up automatically. Transmission towers can also be paired manually by ID with \"Toggle link\" (needs a clear line of sight)."
+
+#. Key:	Section_TowerId
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(484)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(484)
+msgid ",Section_TowerId"
+msgstr "Tower ID"
+
+#. Key:	Label_CurrentTowerId
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(489)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(489)
+msgid ",Label_CurrentTowerId"
+msgstr "Current tower ID"
+
+#. Key:	Label_NewTowerId
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(494)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(494)
+msgid ",Label_NewTowerId"
+msgstr "New tower ID"
+
+#. Key:	Label_Range
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(517)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(517)
+msgid ",Label_Range"
+msgstr "Current range: {0} m (cap {1} m, cannot exceed)"
+
+#. Key:	Btn_LaserVisibleOff
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(536)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(536)
+msgid ",Btn_LaserVisibleOff"
+msgstr "Beams visible: off"
+
+#. Key:	Btn_ToggleLinkSameId
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(552)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(552)
+msgid ",Btn_ToggleLinkSameId"
+msgstr "Toggle link: ID {0} (same ID · auto-linked)"
+
+#. Key:	Btn_ToggleLinkWithState
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(558)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(558)
+msgid ",Btn_ToggleLinkWithState"
+msgstr "Toggle link: ID {0} ({1})"
+
+#. Key:	Link_Linked
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(561)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(561)
+msgid ",Link_Linked"
+msgstr "linked"
+
+#. Key:	Link_NotLinked
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(562)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(562)
+msgid ",Link_NotLinked"
+msgstr "not linked"
+
+#. Key:	Btn_RangeDisplayOn
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(580)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(580)
+msgid ",Btn_RangeDisplayOn"
+msgstr "Range display: on"
+
+#. Key:	Status_PowerOff
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(595)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(595)
+msgid ",Status_PowerOff"
+msgstr "Status: powered down"
+
+#. Key:	Status_Running
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(601)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(601)
+msgid ",Status_Running"
+msgstr "Status: running · {0} nodes linked · {1} machines powered"
+
+#. Key:	Status_NoPowerLinked
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(610)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(610)
+msgid ",Status_NoPowerLinked"
+msgstr "Status: no power · {0} nodes linked · {1} machines powered (peers are unpowered; wire any one node into a grid)"
+
+#. Key:	Status_NoPowerNoLinks
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(618)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(618)
+msgid ",Status_NoPowerNoLinks"
+msgstr "Status: no power · no nodes linked (wire this into a powered grid, or place a same-ID node within range)"
+
+#. Key:	Combo_IdWithDistance
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(926)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(926)
+msgid ",Combo_IdWithDistance"
+msgstr "ID {0} · {1} m away"
+
+#. Key:	Combo_IdOutOfRange
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(928)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(928)
+msgid ",Combo_IdOutOfRange"
+msgstr "ID {0} · out of range"
+
+#. Key:	Combo_IdLinked
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(990)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(990)
+msgid ",Combo_IdLinked"
+msgstr "ID {0} · linked"
+
+#. Key:	Combo_Id
+#. SourceLocation:	Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(992)
+#: Mods/WirelessPower/Source/WirelessPower/WirelessPowerPanelWidget.cpp(992)
+msgid ",Combo_Id"
+msgstr "ID {0}"
+

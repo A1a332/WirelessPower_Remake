@@ -1,0 +1,17 @@
+{
+	"name": "WirelessPower-重制版",
+	"mod_reference": "WirelessPower_Remake",
+	"version": "1.1.5",
+	"gameVersion": ">=502094",
+	"description": "Wireless power transfer for Satisfactory 1.2. A wireless grid of peer nodes (Relay / Power Converter / Area Power Pole / Laser Tower) that share one power circuit across distance without cables. A newly built node joins the in-range grid by itself (distance based, no id needed) and inherits the nearest node's channel; the Area Power Pole also carries a real cable terminal like the original.",
+	"authors": ["Monsue"],
+	"objects": [],
+	"required_on_remote": true,
+	"dependencies": [
+		{
+			"mod_reference": "SML",
+			"version": "^3.12.0",
+			"optional": false
+		}
+	]
+}
