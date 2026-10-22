@@ -14,4 +14,4 @@
 //
 // Wrapped in TEXT() so it concatenates correctly with the other TEXT(...) literals in the
 // startup banner (a bare narrow "1.1.2" would fail to combine with wide TCHAR strings).
-#define WIRELESS_POWER_VERSION_TEXT TEXT("1.1.5")
+#define WIRELESS_POWER_VERSION_TEXT TEXT("1.2.1")

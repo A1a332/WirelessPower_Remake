@@ -33,6 +33,18 @@ public class WirelessPower : ModuleRules {
             "SlateCore"
         });
 
+        // —— 编辑器专属依赖（仅 FactoryEditor 目标，严禁进入 Shipping）——
+        // WirelessPowerRenameContentCommandlet 用 IAssetTools::RenameAssets 重写内容包路径；
+        // AssetTools 是 Developer 编辑器模块，Shipping 构建链中没有它 → 必须 bBuildEditor 守卫，
+        // 否则 PackagePlugin(Shipping) 链接期报 LNK1120。命令列跑完后会 .bak 移出构建（双保险）。
+        if (Target.bBuildEditor)
+        {
+            PrivateDependencyModuleNames.AddRange(new string[] {
+                "AssetTools",
+                "AssetRegistry"
+            });
+        }
+
         // 中文源码字面量：需要 MSVC 的 /utf-8（源 + 执行字符集都是 UTF-8），但**不需要**在这里手动加。
         // UE5 的 VCToolChain.cs 对 MSVC 无条件加 /utf-8（Engine/Source/Programs/UnrealBuildTool/
         // Platform/Windows/VCToolChain.cs:650 Arguments.Add("/utf-8")）。

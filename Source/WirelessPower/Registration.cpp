@@ -728,21 +728,43 @@ void UWirelessPowerTierUnlock::InstallBlueprintUnlock(UWirelessPowerMilestone* M
 {
     if (!Milestone) return;
 
-    // v1.1.4 [cross-world crash fix]: empty the milestone's mUnlocks at the very start of every
-    // call. The milestone passed in is a CDO (MilestoneClass->GetDefaultObject(), process-immortal)
-    // and the unlock instance we NewObject below is AddToRoot()'d, so it too is process-immortal.
-    // Without this, an entry from a PREVIOUS world lingers in the CDO's mUnlocks; the next world's
-    // INITIALIZATION re-walks mUnlocks -> unlock -> recipe through a STALE SML FGameObjectRegistration*
-    // (deleted when the prior world's UModContentRegistry subsystem tore down) and crashes at
-    // ModContentRegistry.cpp:860/861 (AV reading 0x8, ReferencedBy Data=0 Num>=2). Emptying first
-    // makes every world rebuild its unlock from live registrations only. The old rooted instance is
-    // left orphaned (tiny, harmless) which is why AddToRoot is kept for the v1.0.45/46 GC fix.
-    Milestone->mUnlocks.Empty();
+    // v1.1.4 [cross-world crash fix] REVISED in v1.2.1: the old fix only Empty()-ed mUnlocks, which
+    // ORPHANED the AddToRoot()'d UFGUnlockRecipe instance -- it stayed process-immortal and, across a
+    // same-process world reload, OUTLIVED the per-world UModContentRegistry / FGameObjectRegistryState
+    // it was registered against. The next world's re-registration then walked a stale recipe -> item
+    // ReferencedBy TArray (Data=NULL, Num>=2) and crashed in ModContentRegistry.cpp AddObjectReference
+    // (AV reading 0x8). The milestone CDO is process-immortal, so its mUnlocks (and the orphaned
+    // instance) survive the world transition; we must UN-ROOT + drop the previous instance BEFORE
+    // creating the new one. This guarantees exactly ONE rooted unlock per live world, rebuilt cleanly
+    // every call. AddToRoot is still required for the v1.0.45/46 GC fix; we simply remove it on
+    // rebuild so no cross-world accumulation occurs.
+    if (Milestone->mUnlocks.Num() > 0)
+    {
+        for (int32 i = Milestone->mUnlocks.Num() - 1; i >= 0; --i)   // friend access
+        {
+            if (UFGUnlock* U = Milestone->mUnlocks[i])
+            {
+                if (U->IsA(UFGUnlockRecipe::StaticClass()))
+                {
+                    if (U->IsRooted())
+                    {
+                        U->RemoveFromRoot();
+                    }
+                    Milestone->mUnlocks.RemoveAt(i);
+                }
+                // foreign (non-BP_UnlockRecipe) unlocks are left intact
+            }
+            else
+            {
+                Milestone->mUnlocks.RemoveAt(i); // NULL hole left by a prior GC purge
+            }
+        }
+    }
 
     // v1.1.3 [reload-diag]: always-on (not WP_LOGF) so a real reload crash reproduces with a
     // clear trail of gen / world / unlock-count even though WP_LOGF is compiled out.
     UE_LOG(LogWirelessPower, Log,
-        TEXT("Wireless Power [reload-diag] InstallBlueprintUnlock gen=#%d milestone=%s mUnlocks=%d"),
+        TEXT("Wireless Power [reload-diag] InstallBlueprintUnlock gen=#%d milestone=%s mUnlocks=%d (post-cleanup)"),
         GWPRegistrationGen, *Milestone->GetClass()->GetName(), Milestone->mUnlocks.Num());
 
     // The game's BP_UnlockRecipe blueprint class. Everything vanilla (and Feyko's original, and
@@ -761,35 +783,10 @@ void UWirelessPowerTierUnlock::InstallBlueprintUnlock(UWirelessPowerMilestone* M
         return;
     }
 
-    // Idempotent: ApplyMilestoneData runs at CONSTRUCTION and again at POST_INITIALIZATION.
-    // v1.0.47: the scan now ALSO treats a NULL entry as "not installed" -- a purged unlock left
-    // a null hole behind and FixupSave_FindBuiltByRecipe crashed dereferencing it (see below).
-    for (const TObjectPtr<UFGUnlock>& Existing : Milestone->mUnlocks)   // friend access
-    {
-        if (Existing && Existing->GetClass() == BPUnlockClass)
-        {
-            // v1.0.47: belt-and-braces -- an instance created before the root-pin fix is not
-            // rooted; pin it now. AddToRoot on an already-rooted object is a no-op.
-            if (!Existing->IsRooted())
-            {
-                Existing->AddToRoot();
-                UE_LOG(LogWirelessPower, Warning,
-                    TEXT("Wireless Power [unlock]: %s root-pinned a pre-existing unlock instance (%s)."),
-                    *Milestone->GetClass()->GetName(), *Existing->GetName());
-            }
-            UE_LOG(LogWirelessPower, Log,
-                TEXT("Wireless Power [reload-diag]   -> already installed (idempotent skip) mUnlocks=%d"),
-                Milestone->mUnlocks.Num());
-            return; // already installed for this world
-        }
-    }
-
-    // Drop any native-class unlock instances left over from older flows; keep foreign unlocks.
-    // v1.0.47: also drop NULL holes left by GC purges of runtime-created unlock instances.
-    Milestone->mUnlocks.RemoveAll([](const TObjectPtr<UFGUnlock>& U)   // friend access
-    {
-        return !U || U->IsA(UFGUnlockRecipe::StaticClass());
-    });
+    // NOTE: the idempotent early-return (skip if a BP unlock already present) was removed on purpose.
+    // ApplyMilestoneData runs at CONSTRUCTION and again at POST_INITIALIZATION, and across world
+    // reloads; we ALWAYS rebuild the single unlock instance (after dropping the old one above) so it
+    // is never stale relative to the live SML registry. The cleanup above IS the idempotency guarantee.
 
     UFGUnlockRecipe* Unlock = NewObject<UFGUnlockRecipe>(Milestone, BPUnlockClass);
     Unlock->mRecipes.Empty();                                           // friend access

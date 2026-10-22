@@ -1,11 +1,29 @@
 #include "WirelessPowerModule.h"
 #include "Logging/LogMacros.h"
 #include "WirelessPowerVersion.h"
+#include "Misc/Paths.h"
+#include "Misc/PackageName.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogWirelessPower, Log, All);
 
 void FWirelessPowerModule::StartupModule()
 {
+    // v1.2.0: register legacy alias mount points. The mod was renamed
+    // WirelessPower -> WirelessPower_Remake, but the internal asset references of the
+    // shipped .uasset files still point at the old roots (/WirelessPower/... and
+    // /Game/WirelessPower/...). These aliases let the cook (and editor) resolve those
+    // stale references to this mod's own Content folder without mutating the asset files.
+    // The cooked output always uses the canonical /Game/WirelessPower_Remake/ paths.
+    {
+        FString ContentDir = FPaths::Combine(FPaths::ProjectDir(), TEXT("Mods/WirelessPower/Content"));
+        if (!ContentDir.EndsWith(TEXT("/")))
+        {
+            ContentDir.AppendChar(TEXT('/'));
+        }
+        FPackageName::RegisterMountPoint(TEXT("/WirelessPower/"), *ContentDir);
+        FPackageName::RegisterMountPoint(TEXT("/Game/WirelessPower/"), *ContentDir);
+    }
+
     // v1.0.29: QUIET LOG. This banner is the ONLY per-session Log line the mod still prints -- it is
     // the fingerprint we use to confirm which build the game actually loaded, so it must stay cheap
     // and it must name the version. Every other Log-level call now goes through WP_LOGF() in

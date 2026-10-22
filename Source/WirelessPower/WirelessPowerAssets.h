@@ -51,10 +51,12 @@ namespace WirelessPowerAssets
 
         static const TCHAR* Roots[] =
         {
-            TEXT("/WirelessPower/"),
+            // ★2026-10-11: 插件改名 WirelessPower_Remake 后，UE 按 uplugin 名挂内容根
+            // /Game/<uplugin名>/，故新根必须排最前；旧根保留兜底（旧身份部署仍可用）。
+            TEXT("/Game/WirelessPower_Remake/"),
+            TEXT("/WirelessPower_Remake/"),
             TEXT("/Game/WirelessPower/"),
-            TEXT("/wirelesspower/"),
-            TEXT("/Game/wirelesspower/"),
+            TEXT("/WirelessPower/"),
         };
 
         for (const TCHAR* Root : Roots)
@@ -107,10 +109,12 @@ namespace WirelessPowerAssets
 
         static const TCHAR* Roots[] =
         {
-            TEXT("/WirelessPower/"),
+            // ★2026-10-11: 插件改名 WirelessPower_Remake 后，UE 按 uplugin 名挂内容根
+            // /Game/<uplugin名>/，故新根必须排最前；旧根保留兜底（旧身份部署仍可用）。
+            TEXT("/Game/WirelessPower_Remake/"),
+            TEXT("/WirelessPower_Remake/"),
             TEXT("/Game/WirelessPower/"),
-            TEXT("/wirelesspower/"),
-            TEXT("/Game/wirelesspower/"),
+            TEXT("/WirelessPower/"),
         };
         for (const TCHAR* Root : Roots)
         {
@@ -155,10 +159,12 @@ namespace WirelessPowerAssets
 
         static const TCHAR* Roots[] =
         {
-            TEXT("/WirelessPower/"),
+            // ★2026-10-11: 插件改名 WirelessPower_Remake 后，UE 按 uplugin 名挂内容根
+            // /Game/<uplugin名>/，故新根必须排最前；旧根保留兜底（旧身份部署仍可用）。
+            TEXT("/Game/WirelessPower_Remake/"),
+            TEXT("/WirelessPower_Remake/"),
             TEXT("/Game/WirelessPower/"),
-            TEXT("/wirelesspower/"),
-            TEXT("/Game/wirelesspower/"),
+            TEXT("/WirelessPower/"),
         };
         for (const TCHAR* Root : Roots)
         {
@@ -185,10 +191,12 @@ namespace WirelessPowerAssets
 
         static const TCHAR* Roots[] =
         {
-            TEXT("/WirelessPower/"),
+            // ★2026-10-11: 插件改名 WirelessPower_Remake 后，UE 按 uplugin 名挂内容根
+            // /Game/<uplugin名>/，故新根必须排最前；旧根保留兜底（旧身份部署仍可用）。
+            TEXT("/Game/WirelessPower_Remake/"),
+            TEXT("/WirelessPower_Remake/"),
             TEXT("/Game/WirelessPower/"),
-            TEXT("/wirelesspower/"),
-            TEXT("/Game/wirelesspower/"),
+            TEXT("/WirelessPower/"),
         };
         for (const TCHAR* Root : Roots)
         {
@@ -228,10 +236,12 @@ namespace WirelessPowerAssets
 
         static const TCHAR* Roots[] =
         {
-            TEXT("/WirelessPower/"),
+            // ★2026-10-11: 插件改名 WirelessPower_Remake 后，UE 按 uplugin 名挂内容根
+            // /Game/<uplugin名>/，故新根必须排最前；旧根保留兜底（旧身份部署仍可用）。
+            TEXT("/Game/WirelessPower_Remake/"),
+            TEXT("/WirelessPower_Remake/"),
             TEXT("/Game/WirelessPower/"),
-            TEXT("/wirelesspower/"),
-            TEXT("/Game/wirelesspower/"),
+            TEXT("/WirelessPower/"),
         };
         for (const TCHAR* Root : Roots)
         {
